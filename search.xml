@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>markdown使用笔记</title>
+      <link href="/2022/10/25/markdown-shi-yong-bi-ji/"/>
+      <url>/2022/10/25/markdown-shi-yong-bi-ji/</url>
+      
+        <content type="html"><![CDATA[<h3 id="1-标题"><a href="#1-标题" class="headerlink" title="1. 标题"></a>1. 标题</h3><p>1到6个# 加空格 再填写内容</p><h3 id="2-列表"><a href="#2-列表" class="headerlink" title="2. 列表"></a>2. 列表</h3><ul><li>*星号加空格 再填写内容 <ul><li>分级列表, 换行tab 再*加空格<ul><li>以此类推</li></ul></li></ul></li></ul><ol><li>有序列表</li><li>直接数字加.加空格</li></ol><h3 id="3-链接"><a href="#3-链接" class="headerlink" title="3. 链接"></a>3. 链接</h3><p><a href="https://www.zhihu.com/">知乎</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技能 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 笔记 </tag>
+            
+            <tag> 计算机技能 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hello World</title>
       <link href="/2022/10/24/hello-world/"/>
       <url>/2022/10/24/hello-world/</url>
