@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title></title>
+      <link href="/posts/0.html"/>
+      <url>/posts/0.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="二-完全且完美信息动态博弈"><a href="#二-完全且完美信息动态博弈" class="headerlink" title="二. 完全且完美信息动态博弈"></a>二. 完全且完美信息动态博弈</h2><h3 id="2-1-动态博弈的表示法和一些概念解释"><a href="#2-1-动态博弈的表示法和一些概念解释" class="headerlink" title="2.1 动态博弈的表示法和一些概念解释"></a>2.1 动态博弈的表示法和一些概念解释</h3><p>一个博弈方或者多个同时 做一次选择称为一个<strong>阶段     <strong>故又名</strong>多阶段博弈</strong><br><strong>一般 最后的得益数组第一个得益数字是第一个做选择的人, 然后依次下去.</strong> (比如下面的例子前面的数字是乙得益, 后面是甲)<br><strong>博弈方的策略</strong> 是针对每个阶段做相应选择的一个完整的计划</p><h3 id="2-2-可信性与纳什均衡"><a href="#2-2-可信性与纳什均衡" class="headerlink" title="2.2 可信性与纳什均衡"></a>2.2 可信性与纳什均衡</h3><p>**问题描述: **甲缺少一千万投资, 投资后有4千万收益, 乙有一千万闲置, 乙借不借?<br><img src="https://cdn.nlark.com/yuque/0/2022/jpeg/22571728/1666766569661-5aca14eb-1169-4950-a505-3748e497ca12.jpeg"><br>可转化为矩阵</p><table><thead><tr><th></th><th>分</th><th>不分</th></tr></thead><tbody><tr><td>借</td><td>(2, 2)</td><td>(0, 4)</td></tr><tr><td>不借</td><td>(1, 0)</td><td>(1, 0)</td></tr></tbody></table><p>得出纳什均衡为(1, 0)  可以看出此时甲的<strong>分的承诺是不可信的 !</strong><br>但此时对于整体而言, 资源并未有效利用, 如何解决?</p><p><img src="https://cdn.nlark.com/yuque/0/2022/png/22571728/1666764675782-32932e57-f2e9-4e55-89e6-fa60c659efc6.png#clientId=u812e9b9c-5944-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;from=paste&amp;height=263&amp;id=u8c03b6f8&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=461&amp;originWidth=827&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=266115&amp;status=done&amp;style=none&amp;taskId=u43450bef-d08d-4a01-ac04-929ec696138&amp;title=&amp;width=472.57142857142856" alt="image.png"><br>转化为矩阵</p><table><thead><tr><th></th><th>分</th><th>不分</th></tr></thead><tbody><tr><td>不借, 不打</td><td>(1, 0)</td><td>(1, 0)</td></tr><tr><td>不借, 打</td><td>(1, 0)</td><td>(1, 0)</td></tr><tr><td>借, 不打</td><td>(2, 2)</td><td>(0, 4)</td></tr><tr><td>借, 打</td><td>(2, 2)</td><td>(1, 0)</td></tr></tbody></table><p>红色全为均衡. <strong>此时转化为矩阵方法出现问题, 问题在于没有排除不可信的策略</strong><br><strong>若进行到第三阶段, 乙必然选择打官司, 而甲是清楚这一点的, 故甲”分”的承诺就可信了.</strong></p><p>对于第二种, 同理可画出矩阵, 得出均衡为 (2, 2) (1, 0) (1, 0) 此时可知道乙的**”打”承诺不可信. 最后只留下一个就是(1, 0)**</p><p><strong>结论: 转化为静态博弈后纳什均衡不能排除博弈方选择的那些不可信的行为. 因而如何排除不可信是很重要的问题</strong></p><h3 id="2-3-逆推归纳法"><a href="#2-3-逆推归纳法" class="headerlink" title="2.3 逆推归纳法"></a>2.3 逆推归纳法</h3><p>就是字面意思的方法, 从后往前分析<br><strong>子博弈: 由一个动态博弈第一阶段以外的某阶段开始的后续博弈阶段构成, 有初始信息集和进行博弈所需要的全部信息, 能够自成一个博弈的原博弈组成部分, 称为原动态博弈一个子博弈.</strong><br><img src="https://cdn.nlark.com/yuque/0/2022/png/22571728/1666767037143-a2606dd6-8dd8-4261-a1e7-781ba8c7a0d7.png#clientId=u812e9b9c-5944-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;from=paste&amp;height=255&amp;id=ue080dfb4&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=447&amp;originWidth=575&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=110410&amp;status=done&amp;style=none&amp;taskId=u09705a81-4345-4cde-82da-aed8bb9fd38&amp;title=&amp;width=328.57142857142856" alt="image.png">划去红线形成子博弈<br><strong>子博弈完美纳什均衡: 如果一策略在整个动态博弈和它的所有子博弈都构成纳什均衡, 那这就是~</strong><br>找这个是动态博弈核心问题, 而逆推归纳法找出的就一定是子博弈完美纳什均衡</p><h3 id="2-4-经典动态博弈"><a href="#2-4-经典动态博弈" class="headerlink" title="2.4 经典动态博弈"></a>2.4 经典动态博弈</h3><h4 id="1-斯塔克伯格模型"><a href="#1-斯塔克伯格模型" class="headerlink" title="1. 斯塔克伯格模型"></a>1. 斯塔克伯格模型</h4><p>双寡头产量博弈, 有先后顺序决定产量<br>Q = q1 + q2<br>P = P(Q) = 8 - Q<br>c1 = c2 = 2<br>u1 = q1P(Q) - c1q1 = 6q1 - q1q2 - q12<br>u2 = q2P(Q) - c2q2 = 6q2 - q1q2 - q22<br>**逆推归纳与反应函数法 **，分析厂商2 此时厂商1 产量已经确定， u2对q2求偏导等于零，<br>得q2 = 3 - q1 / 2<br>此时将上式带入u1的表达式, 因为厂商一是知道厂商二的反应函数的<br>故此时u1 为 q1的函数 求导可得 最佳 q1<br>q1 带入 厂商二反应函数 可得均衡q2<br><strong>最后结果是(3, 1.5) 利润为(4.5, 2.25)</strong><br><strong>与两厂商同时决策的古诺模型比较, 产量更高, 价格更低, 总利润降低, 但前者利益更大, 反映了市场地位不对称性.</strong></p><h4 id="2-劳资博弈"><a href="#2-劳资博弈" class="headerlink" title="2. 劳资博弈"></a>2. 劳资博弈</h4><p>工会效用是 **工资率与被雇佣人数的函数 <strong>两者都高工会效用就高 工会效用u = u(W, L)<br>厂商只关心利润 收益 R（L）(满足边际收益递减)<br><img src="https://cdn.nlark.com/yuque/0/2022/png/22571728/1666769028765-17206298-2cb2-4713-9386-0cbd66e1b43e.png#clientId=u812e9b9c-5944-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;from=paste&amp;height=326&amp;id=u9345eebf&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=571&amp;originWidth=1054&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=292905&amp;status=done&amp;style=none&amp;taskId=uf7948807-8ebc-4c80-a487-7ebbf417620&amp;title=&amp;width=602.2857142857143" alt="image.png"><br>逆推先分析厂商<br><em><em>均衡为R(L)’ = W    (MR = MC)     此时可得一函数 L = L</em>(W)</em>*<br>第二步分析 工会<br>*<em>将 L = L</em>(W) 带入 u(W, L), 此时u 对 W 求导即可.</strong></p><h4 id="3-议价博弈"><a href="#3-议价博弈" class="headerlink" title="3. 议价博弈"></a>3. 议价博弈</h4><p>甲乙两人谈判分一万元现金, 先甲提出方案, 若乙方接受则结束, 否则进入第二轮, 乙提出交易方案, 若继续下去到第三轮则甲的提议乙必须接受<br>但要注意 议价有成本, 每进行一回合 分的总金额变为上一轮的 δ 倍 一回合分一万, 第二回合只有 δ * 10000元可以分<br><img src="https://cdn.nlark.com/yuque/0/2022/png/22571728/1666769845007-2e3ee331-a934-46c1-9dc9-11b6a8df23fd.png#clientId=u812e9b9c-5944-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;from=paste&amp;height=306&amp;id=uabbf24fd&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=535&amp;originWidth=741&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=200850&amp;status=done&amp;style=none&amp;taskId=u7922c7fb-211e-4cd0-a9f7-3290c5ffcf3&amp;title=&amp;width=423.42857142857144" alt="image.png"></p><ul><li><strong>从第三回合开始, 甲的提议乙无法拒绝故甲会选择S = 10000</strong></li><li>**第二回合, 乙必须让甲能得到的钱大于进入第三轮甲得到的, 否则甲进入第三轮乙会颗粒无收, **</li></ul><p><strong>故要满足</strong> δS2 =  δ2S</p><ul><li>**第一回合, 甲知道乙第二回合会让 **δS2 =  δ2S 即 S2 =  δS **即自己进入第二轮自己得益也是 **δ2S **故甲最好的是第一轮就给乙  **10000δ - δ2S   **同时自己得到的大于 **δ2S</li></ul><p>10000 - S1 = 10000δ - δ2S<br><strong>因此甲选择 S<strong>*<em>1 <strong><strong>= 10000(1 - δ + δ</strong></strong>2</em>*</strong>) 乙接受, 得益[10000(1 - δ + δ**<strong>2</strong></strong>),  10000(δ - δ<strong><strong>2</strong></strong>)]**</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>markdown使用笔记</title>
       <link href="/posts/22455.html"/>
       <url>/posts/22455.html</url>
@@ -40,16 +53,16 @@
       
       <categories>
           
-          <category> 金融知识 </category>
+          <category> 笔记 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 笔记 </tag>
+            <tag> 金融 </tag>
             
-            <tag> 金融专业知识 </tag>
+            <tag> 专业知识 </tag>
             
         </tags>
       
